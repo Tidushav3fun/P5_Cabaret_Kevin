@@ -25,6 +25,9 @@ fetch(api+"/"+ id)
         select.appendChild(option)
     }
 })
+
+/*Ajouter un article au panier*/
+
 button.addEventListener("click", ()=> { 
     panier.push({
         name : teddy.name,
@@ -34,4 +37,6 @@ button.addEventListener("click", ()=> {
         quantity : 1,
     })
     localStorage.setItem("panier",JSON.stringify(panier))
+    alert('Ajouté au panier !');
+    window.location.reload();
 })

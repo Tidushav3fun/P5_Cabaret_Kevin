@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,27 +8,47 @@
     <link rel="stylesheet" href="style.css">
     <title>Panier</title>
 </head>
+
 <body>
     <header>
         <a href="index.html"><img src="images/logo.jpg" alt="Logo Orinoco"></a>
         <nav>
-                <ul class="navigation">
-                    <li><a class="menu" href="index.html" title="Accueil">Produits</a></li>
-                    <li><a class="menu" href="panier.html" title="Panier">Panier</a></li>
-                </ul>
-         </nav>
+            <ul class="navigation">
+                <li><a class="menu" href="index.html" title="Accueil">Produits</a></li>
+                <li><a class="menu" href="panier.html" title="Panier">Panier</a></li>
+            </ul>
+        </nav>
     </header>
+    <section id="containerpanier">
+        <h2>Mon Panier</h2>
+        <div id="tableauproduits">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Couleur</th>
+                        <th>Prix</th>
+                        <th>Quantité</th>
+                        <th>Supprimer</th>
+                    </tr>
+                </thead>
+                <tbody id="productlist"></tbody>
+            </table>
+        </div>
 
-    <div id="containerbasket"> </div>
+        <p class="montant">Sous total : <span class="subtotal"></span>€</p>
 
+        <button id="confirm-command">Passer la commande</button>
+    </section>
     <footer>
         <p class="copyright">
             © Cabaret Kévin Tous droits réservés
         </p>
     </footer>
 
-        <!--     MY SCRIPT FRONT    -->
-        <script src="common.js"></script>
-        <script src="panier.js"></script>
+    <!--     MY SCRIPT FRONT    -->
+    <script src="common.js"></script>
+    <script src="panier.js"></script>
 </body>
+
 </html>
