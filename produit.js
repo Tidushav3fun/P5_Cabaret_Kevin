@@ -1,4 +1,3 @@
-let panier= JSON.parse(localStorage.getItem("panier")) || []
 var searchParams = new URLSearchParams(window.location.search)
 const id = searchParams.get("id")
 console.log(id)
@@ -17,7 +16,7 @@ fetch(api+"/"+ id)
     title.innerHTML= teddy.name
     image.setAttribute("src",teddy.imageUrl)
     description.innerHTML= teddy.description
-    prix.innerHTML = (teddy.price + " " +"€")
+    prix.innerHTML = (teddy.price/100 + " " +"€")
     for (const color of teddy.colors){
         const option = document.createElement("option")
         option.setAttribute("value", color)
@@ -29,6 +28,7 @@ fetch(api+"/"+ id)
 /*Ajouter un article au panier*/
 
 button.addEventListener("click", ()=> { 
+    let panier = [];
     panier.push({
         name : teddy.name,
         price : teddy.price,
@@ -40,3 +40,4 @@ button.addEventListener("click", ()=> {
     alert('Ajouté au panier !');
     window.location.reload();
 })
+

@@ -4,6 +4,16 @@
     font-family: "Montserrat", sans-serif;
   }
 
+body, html {
+    height: 100%;
+}
+
+body{
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 /* HEADER */  
 
 header nav {
@@ -125,6 +135,11 @@ h1 {
 
 footer {
     background-color: #f3e7f1;
+    position: sticky; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 .copyright {
@@ -198,50 +213,97 @@ footer {
 
 /* Page panier */
 
-#containerpanier {
-    margin-top: 50px;
+.panierglobal {
+    display: flex;
+    margin-top: 80px;
+    width: 100%;
 }
 
-#containerpanier h2 {
-    margin-left: 10px;
+.panierglobal #containerpanier {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }
 
-.table {
-    width: 90%;
+.panierglobal #containerpanier h2 {
+    margin-left: 20px;
+}
+
+.panierglobal .table {
+    width: 100%;
     margin-left: 30px;
 }
 
-thead {
+.panierglobal thead {
     font-size: 15px;
     background-color : #f3e7f1;
 }
 
-.montant {
+.panierglobal .montant {
     font-size: 20px;
     margin-left: 30px;
 }
 
-.containerproduct button {
+.panierglobal .containerproduct button {
     margin-left: 40%;
 }
 
-.panier-vide {
+.panierglobal .panier-vide {
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-#productlist {
+.panierglobal #productlist {
     border: none;
 }
 
-th {
+.panierglobal th {
     padding: 10px;
     font-size: 16px;
 }
 
-#confirm-command {
+.panierglobal #formulaire {
+    margin-left: 5%;
+    width: 60%;
+}
+
+.montant {
     display: flex;
-    margin-left: 30px;
+    flex-direction: row;
+}
+
+.subtotal {
+    margin : 0 10px 0 10px;
+}
+
+#formulaire div {
+    display: flex;
+    margin : 25px;
+    font-size: 20px;
+}
+
+#formulaire h2 {
+    margin-top : 20px;
+}
+
+#formbutton {
+    margin:25px 0 15px 40%;
     padding: 10px;
+}
+
+#formulaire label {
+    display: flex;
+    flex-direction: row;
+    width: 25%;
+    margin-top: 2px;
+}
+
+#formulaire__nom {
+    padding-top: 18px;
+}
+
+input {
+    font-size: 15px;
+    padding: 5px;
 }
