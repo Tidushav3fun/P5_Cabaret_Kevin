@@ -1,3 +1,4 @@
+let panier = JSON.parse(localStorage.getItem("panier")) || []
 var searchParams = new URLSearchParams(window.location.search)
 const id = searchParams.get("id")
 console.log(id)
@@ -28,7 +29,6 @@ fetch(api+"/"+ id)
 /*Ajouter un article au panier*/
 
 button.addEventListener("click", ()=> { 
-    let panier = [];
     panier.push({
         name : teddy.name,
         price : teddy.price,
@@ -41,3 +41,16 @@ button.addEventListener("click", ()=> {
     window.location.reload();
 })
 
+// Quantité de produits dans le panier //
+
+const positionElement3 = document.querySelector(".nombreproduits")
+
+if(panier === null){
+    QuantiteTotalHTML= '0';
+}else{
+    QuantiteTotalHTML = panier.length;
+}    
+
+positionElement3.innerHTML = `
+( ${QuantiteTotalHTML} )
+`;

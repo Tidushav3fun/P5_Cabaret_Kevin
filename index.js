@@ -1,3 +1,5 @@
+let panier = JSON.parse(localStorage.getItem("panier"))
+
 const container = document.getElementById("container");
 
 fetch(api)
@@ -15,3 +17,17 @@ fetch(api)
         `;
     }
 })
+
+// Quantité de produits dans le panier //
+
+const positionElement3 = document.querySelector(".nombreproduits")
+
+if(panier === null){
+    QuantiteTotalHTML= '0';
+}else{
+    QuantiteTotalHTML = panier.length;
+}    
+
+positionElement3.innerHTML = `
+( ${QuantiteTotalHTML} )
+`;
