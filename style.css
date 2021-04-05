@@ -287,7 +287,7 @@ footer {
     margin-top : 20px;
 }
 
-#formbutton {
+#validbutton {
     margin:25px 0 15px 40%;
     padding: 10px;
 }
@@ -306,4 +306,14 @@ footer {
 input {
     font-size: 15px;
     padding: 5px;
+}
+
+/*    FINALISATION COMMANDE    */
+
+.main , .Ncommande , .tdtotalCde {
+    display:flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
 }
