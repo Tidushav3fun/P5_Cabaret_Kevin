@@ -264,7 +264,7 @@ footer {
 }
 
 .panierglobal #formulaire {
-    margin-left: 5%;
+    margin-left: 3%;
     width: 60%;
 }
 
@@ -279,7 +279,7 @@ footer {
 
 #formulaire div {
     display: flex;
-    margin : 25px;
+    margin : 25px 25px 25px 0;
     font-size: 20px;
 }
 
@@ -306,6 +306,15 @@ footer {
 input {
     font-size: 15px;
     padding: 5px;
+}
+
+#missNom , #missPrenom , #missEmail , #missVille , #missAddress {
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.fa-check {
+    color : green;
 }
 
 /*    FINALISATION COMMANDE    */
