@@ -37,7 +37,7 @@ function showOrder (){
     let totalCde = document.getElementsByClassName('totalCde');
     totalCde[0].innerHTML = totalCommande() + " €";
     totalCde[1].innerHTML = totalCommande() + " €";
-    
+    return totalCde.innerHTML
 };
 
 showOrder();

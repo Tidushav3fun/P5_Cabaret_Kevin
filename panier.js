@@ -87,8 +87,6 @@ positionElement4.addEventListener("click", function (event) {
     suppressionArticle(event.target.id);
 });
 
-
-
 //                FORMULAIRE                    //
 
 // Objet contact à envoyer au serveur
@@ -221,6 +219,6 @@ function validation(){
         });
     })
     .catch(error => { // enregistrement si erreur lors de l'envoi de données 
-         alert(error);
+        alert('La connexion au serveur a échouée !');
     })  
 };

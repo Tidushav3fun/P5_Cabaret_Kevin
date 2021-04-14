@@ -7,16 +7,25 @@ fetch(api)
 .then((teddies) => {
     console.log(teddies);
     for(const teddy of teddies) {
-        container.innerHTML += `
-        <div class="card">
-            <img class="thumbnail" src="${teddy.imageUrl}" alt="">
-            <div><h1>${teddy.name}</h1></div>
-            <p class="description">${teddy.description}</p>
-            <a class="bouton" href="produit.html?id=${teddy._id}" > Voir </a>
-        </div>
-        `;
+        container.innerHTML += createCard(teddy);
     }
 })
+
+.catch(function (error) {
+    console.log('Il y a eu un problème avec l\'opération fetch: ' + error);
+    alert('La connexion au serveur a échouée !');
+});
+
+function createCard (teddy){
+    return `
+    <div class="card">
+        <img class="thumbnail" src="${teddy.imageUrl}" alt="">
+        <div><h1>${teddy.name}</h1></div>
+        <p class="description">${teddy.description}</p>
+        <a class="bouton" href="produit.html?id=${teddy._id}" > Voir </a>
+    </div>
+    `
+}
 
 // Quantité de produits dans le panier //
 

@@ -310,10 +310,33 @@ input {
 
 /*    FINALISATION COMMANDE    */
 
-.main , .Ncommande , .tdtotalCde {
-    display:flex;
+.imgheader, .tdtotalCde {
+    display: flex;
     align-content: center;
     justify-content: center;
     text-align: center;
+}
+
+.imgheader h2 {
+    padding-top: 28px;
+    color : #9356DC;
+}
+
+.main {
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
     font-size: 20px;
+    margin: 20px;
+}
+
+.checkedcommande {
+    margin: 20px;
+    font-size: 10%;
+}
+
+.tdNcommande1 ,.tdNcommande2 ,.tdtotalCde2{
+    font-weight: bold;
+    color : #9356DC;
+    padding-right: 20px;
 }

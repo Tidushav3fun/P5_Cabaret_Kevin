@@ -26,6 +26,10 @@ fetch(api+"/"+ id)
     }
 })
 
+.catch (function (err) {
+    alert('La connexion au serveur a échouée !');
+});
+  
 /*Ajouter un article au panier*/
 
 button.addEventListener("click", ()=> { 
